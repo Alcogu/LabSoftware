@@ -15,7 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+<<<<<<< HEAD
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+=======
+from Vivero import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.home),
+]
+
+urlpatterns += staticfiles_urlpatterns()
+>>>>>>> dimas
