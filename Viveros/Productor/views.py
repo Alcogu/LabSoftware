@@ -1,26 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template import loader, Context
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
-from forms import FormularioProductor
+from Productor.forms import FormularioProductor
+from Productor.models import Productor
+from django.views.generic.edit import CreateView
 
 # Create your views here.
 def productor(request):
-    return render(request, "productor/productores.html")
-
-#La vista es la que recibe la petición y la ejecuta.
-'''
-#Vista para el formulario 
-def productorFormulario(request):
     if request.method == 'POST':
         form = FormularioProductor(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect('')
+            form.save()
+        return redirect('Productor')
     else:
-        form = FormularioProductor()
-    return render(request, '', {'form': form})
+        form = FormularioProductor
+    return render(request, 'productor/productores.html', {'form': form})
+    
 
-
-def gracias(request):
-    html = '<html><body>"Gracias por enviar los datos.</body></html>'
-    return HttpResponse(html)'''

@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Vivero.urls')),
     path('productor/', include('Productor.urls')),
+    #path('formularioProductor/', include('Productor.urls')),
     path('labor/', include('Labor.urls')),
     path('iniciosesion/', include('Login.urls'))
 

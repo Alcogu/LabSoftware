@@ -8,7 +8,60 @@
 
 </head>
 
-<p style="color: white; text-align: center;">Aca viene el formulario de los productores.</p>
+<form method="POST">
+    {% csrf_token%}
+    <div class="form-group">
+        <label for="{{ form.numero_documento.id_for_label }}"
+                class="col-sm-2 control-label"> {{ form.numero_documento.label }}</label>
+        <div class="col-sm-8">
+            {{ form.numero_documento }}
+        </div>
+    </div>
 
+    <div class="form-group">
+        <label for="{{ form.nombre.id_for_label }}"
+                class="col-sm-2 control-label"> {{ form.nombre.label }}</label>
+        <div class="col-sm-8">
+            {{ form.nombre }}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.apellido.id_for_label }}"
+                class="col-sm-2 control-label"> {{ form.apellido.label }}</label>
+        <div class="col-sm-8">
+            {{ form.apellido }}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.direccion.id_for_label }}"
+                class="col-sm-2 control-label"> {{ form.direccion.label }}</label>
+        <div class="col-sm-8">
+            {{ form.direccion }}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.email.id_for_label }}""
+                class="col-sm-2 control-label"> {{ form.email.label }}</label>
+        <div class="col-sm-8">
+            {{ form.email }}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.telefono.id_for_label }}"
+                class="col-sm-2 control-label"> {{ form.telefono.label }}</label>
+        <div class="col-sm-8">
+            {{ form.telefono }}
+        </div>
+    </div>
+
+      
+    <button class="btn btn-primary" type="submit">Guardar</button>
+
+
+</form>
 
 {% endblock %}
