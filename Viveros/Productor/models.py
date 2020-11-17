@@ -6,6 +6,7 @@ class Productor(models.Model):
     numero_documento = models.IntegerField()
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
+<<<<<<< HEAD
     direccion = models.CharField(max_length=60)
     email = models.EmailField()
     telefono = models.CharField(max_length=10)
@@ -17,3 +18,11 @@ class Productor(models.Model):
     
 
     
+=======
+<<<<<<< HEAD
+    numero_documento = models.IntegerField()
+=======
+    numero_documento = models.IntegerField()
+    
+>>>>>>> dimas
+>>>>>>> Develop
