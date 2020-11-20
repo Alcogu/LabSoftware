@@ -36,5 +36,3 @@ class FormularioProductor(forms.ModelForm):
             'email': forms.TextInput(attrs={'class':'form-control'}),
             'telefono': forms.TextInput(attrs={'class':'form-control'}),
         }
-
-    
