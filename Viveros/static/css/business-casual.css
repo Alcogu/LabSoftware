@@ -236,7 +236,7 @@ p {
 .bg-primary {
   background-color: #e6a756 !important;
 }
-
+ 
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
 }
@@ -253,4 +253,9 @@ p {
 
 .font-weight-light {
   font-weight: 100 !important;
+}
+
+.label {
+  color: blue !important;
+  padding: 8px;
 }
