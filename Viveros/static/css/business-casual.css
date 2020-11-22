@@ -244,18 +244,19 @@ p {
 .btn-primary {
   background-color: #e6a756;
   border-color: #e6a756;
+ 
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background-color: #df902a;
   border-color: #df902a;
+  
 }
 
 .font-weight-light {
   font-weight: 100 !important;
 }
 
-.label {
-  color: blue !important;
-  padding: 8px;
+.th{
+  background: #d94a38;
 }

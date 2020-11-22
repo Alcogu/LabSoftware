@@ -4,64 +4,75 @@
 
 <head>
     <title>Productores</title>
+    
+    <script type="text/javascript">
+    function ConfirmarRegistro(){
+        alert("Registro exitoso")
+    }
+    </script>
 
+    <script type="text/javascript">
+    function CambioRegistro(){
+        alert("Cambio Exitoso")
+    }
+    </script>
 
 </head>
+
+<br>
+<h2 style="color: white; text-align: left; height: 50px; padding-left: 300px;">Registro Productores</h2>
+
+
 
 <form method="POST">
     {% csrf_token%}
     <div class="form-group">
-        <label for="{{ form.numero_documento.id_for_label }}"
-                class="col-sm-2 control-label"> {{ form.numero_documento.label }}</label>
-        <div class="col-sm-8">
-            {{ form.numero_documento }}
-        </div>
+        
+        <label for="{{ form.numero_documento.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 80px;"   
+                class="col-sm-5 control-label"> {{form.numero_documento.label_tag}} {{ form.numero_documento }}</label>
+        
     </div>
 
     <div class="form-group">
-        <label for="{{ form.nombre.id_for_label }}"
-                class="col-sm-2 control-label"> {{ form.nombre.label }}</label>
-        <div class="col-sm-8">
-            {{ form.nombre }}
-        </div>
+        <label for="{{ form.nombre.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 80px;"
+                class="col-sm-5 control-label"> {{ form.nombre.label_tag }} {{ form.nombre }}</label>
     </div>
 
     <div class="form-group">
-        <label for="{{ form.apellido.id_for_label }}"
-                class="col-sm-2 control-label"> {{ form.apellido.label }}</label>
-        <div class="col-sm-8">
-            {{ form.apellido }}
-        </div>
+        <label for="{{ form.apellido.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 80px;"
+                class="col-sm-5 control-label"> {{ form.apellido.label_tag }} {{ form.apellido }}</label>
     </div>
 
     <div class="form-group">
-        <label for="{{ form.direccion.id_for_label }}"
-                class="col-sm-2 control-label"> {{ form.direccion.label }}</label>
-        <div class="col-sm-8">
-            {{ form.direccion }}
-        </div>
+        <label for="{{ form.direccion.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 60px;"
+                class="col-sm-5 control-label"> {{ form.direccion.label_tag }} {{ form.direccion }}</label>
+        
     </div>
 
     <div class="form-group">
-        <label for="{{ form.email.id_for_label }}""
-                class="col-sm-2 control-label"> {{ form.email.label }}</label>
-        <div class="col-sm-8">
-            {{ form.email }}
-        </div>
+        <label for="{{ form.email.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 100px;"
+                class="col-sm-5 control-label"> {{ form.email.label_tag }} {{ form.email }}</label>
+        
     </div>
 
     <div class="form-group">
-        <label for="{{ form.telefono.id_for_label }}"
-                class="col-sm-2 control-label"> {{ form.telefono.label }}</label>
-        <div class="col-sm-8">
-            {{ form.telefono }}
-        </div>
+        <label for="{{ form.telefono.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 70px;"
+                class="col-sm-5 control-label"> {{ form.telefono.label_tag }} {{ form.telefono }}</label>
+            
     </div>
 
       
-    <button class="btn btn-primary" type="submit">Guardar</button>
+    <button class="btn btn-primary" type="submit" style="width: 110px; margin-left: 17%; font-size: 20px;" onclick="ConfirmarRegistro()">Guardar</button>
 
+    <button class="btn btn-primary" type="submit" style="width: 110px; margin-left: 1%; font-size: 20px;" onclick="CambioRegistro()">Editar</button>
 
+    <a class="button" href="listarproductor" style="color: khaki; padding: 0px; margin-left: 1%; font-size: 20px;">Ver registros</a>
+ 
 </form>
+
+<br>
+
+
+
 
 {% endblock %}
