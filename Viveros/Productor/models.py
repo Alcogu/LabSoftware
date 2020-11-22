@@ -6,10 +6,13 @@ class Productor(models.Model):
     numero_documento = models.IntegerField()
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
-<<<<<<< HEAD
+#<<<<<<< HEAD
     direccion = models.CharField(max_length=60)
     email = models.EmailField()
     telefono = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.nombre
 
     class Meta:
         verbose_name = "productor"
@@ -18,11 +21,11 @@ class Productor(models.Model):
     
 
     
-=======
-<<<<<<< HEAD
-    numero_documento = models.IntegerField()
-=======
-    numero_documento = models.IntegerField()
+#=======
+#<<<<<<< HEAD
+#    numero_documento = models.IntegerField()
+#=======
+#    numero_documento = models.IntegerField()
     
->>>>>>> dimas
->>>>>>> Develop
+#>>>>>>> dimas
+#>>>>>>> Develop
