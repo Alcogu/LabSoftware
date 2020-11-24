@@ -33,10 +33,10 @@
             <th>Cedula</th>
             <th>Nombre</th>
             <th>Apellido</th>
-            <th>Direccion</th>
+            <th>Dirección</th>
             <th>Email</th>
             <th>Telefono</th>
-            <th>Opcion</th>
+            <th>Opción</th>
         </tr>
     </thead>
     <tbody>
@@ -48,7 +48,7 @@
             <td>{{ productor.direccion }}</td>
             <td>{{ productor.email }}</td>
             <td>{{ productor.telefono }}</td>
-            <td><a href="{% url 'editarproductor' productor.id %}" style="color: khaki;">Editar</a>  <a href="{% url 'eliminarproductor' productor.id %}" style="color: khaki;" onclick="ConfirmarEliminar()">Eliminar</a></td>
+            <td><a class="btn btn-primary" href="{% url 'editarproductor' productor.id %}" style="color: black;">Editar</a>  <a class="btn btn-primary" href="{% url 'eliminarproductor' productor.id %}" style="color: black;">Eliminar</a></td>
             
         </tr>
         {% endfor %}
@@ -56,9 +56,6 @@
 </table>
 
 <br>
-
-
-
 
 
 {% endblock %}

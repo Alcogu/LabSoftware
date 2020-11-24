@@ -40,9 +40,13 @@ def editar_productor(request, id):
             return redirect('listarproductor')
     return render(request, 'productor/productores.html', contexto)
 
+
 def eliminar_productor(request, id):
     productor = Productor.objects.get(id = id)
-    productor.delete()
-    return redirect('listarproductor')
+
+    if request.method == 'POST':
+        productor.delete()
+        return redirect('listarproductor')
+    return render(request, 'productor/confirmarEliminar.html', {'productor':productor})
     
 
