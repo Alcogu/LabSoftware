@@ -13,9 +13,6 @@ class Productor(models.Model):
 =======
     numero_documento = models.IntegerField()
     
-<<<<<<< HEAD
->>>>>>> dimas
-=======
 >>>>>>> dimas
 =======
 =======
@@ -47,4 +44,3 @@ class Productor(models.Model):
 #>>>>>>> dimas
 #>>>>>>> Develop
 >>>>>>> dimas
->>>>>>> Registro

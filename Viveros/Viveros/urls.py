@@ -42,12 +42,6 @@ urlpatterns = [
 
 #<<<<<<< HEAD
 urlpatterns += staticfiles_urlpatterns()
-<<<<<<< HEAD
->>>>>>> dimas
-=======
->>>>>>> dimas
-=======
 #>>>>>>> dimas
 #=======
 #>>>>>>> dimas
->>>>>>> Registro
