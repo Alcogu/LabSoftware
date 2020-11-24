@@ -1,9 +1,10 @@
 from django import forms
 from Productor.models import Productor
+from colorfield.widgets import ColorWidget 
 
 class FormularioProductor(forms.ModelForm):
     
-    #Se cre la clase para invocar el modelo 
+    #Se crea la clase para invocar el modelo 
     class Meta:
         model = Productor 
         #fields = '__all__'
@@ -20,7 +21,7 @@ class FormularioProductor(forms.ModelForm):
     #Se definen las etiquetas y escribimos un diccionario
 
         labels = {
-            'numero_documento': 'N° Documento',
+            'numero_documento': 'Cedula',
             'nombre': 'Nombre',
             'apellido': 'Apellido',
             'direccion': 'Direccion',
@@ -29,6 +30,7 @@ class FormularioProductor(forms.ModelForm):
         }
 
         widgets = {
+<<<<<<< HEAD
             'numero_documento': forms.TextInput(attrs={'class':'form-control'}),
             'nombre': forms.TextInput(attrs={'class':'form-control'}),
             'apellido': forms.TextInput(attrs={'class':'form-control'}),
@@ -36,3 +38,19 @@ class FormularioProductor(forms.ModelForm):
             'email': forms.TextInput(attrs={'class':'form-control'}),
             'telefono': forms.TextInput(attrs={'class':'form-control'}),
         }
+=======
+            'numero_documento': forms.TextInput(attrs={'class': 'left', 'autofocus': 'autofocus'}),
+            'nombre': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
+            'apellido': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
+            'direccion': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
+            'email': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
+            'telefono': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
+
+            
+        }
+
+
+        
+
+    
+>>>>>>> Registro
