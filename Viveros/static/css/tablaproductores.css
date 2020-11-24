@@ -11,9 +11,17 @@ th {
   }
 td {
     font-size: 18px;
-    background: #666;
+    background: #24303c;
     color: #fff;
     text-align: center;
     padding: 10px 20px 0px;
     
 }
+
+h3 {
+    text-align: center !important;
+    color: #fff;
+    background: #24303c;
+    height: 6%;
+}
+

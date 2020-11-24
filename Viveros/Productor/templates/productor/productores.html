@@ -4,6 +4,7 @@
 
 <head>
     <title>Productores</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/productores.css' %}">
     
     <script type="text/javascript">
     function ConfirmarRegistro(){
@@ -11,62 +12,57 @@
     }
     </script>
 
-    <script type="text/javascript">
-    function CambioRegistro(){
-        alert("Cambio Exitoso")
-    }
-    </script>
-
 </head>
 
 <br>
-<h2 style="color: white; text-align: left; height: 50px; padding-left: 300px;">Registro Productores</h2>
+
 
 
 
 <form method="POST">
+    <h4>Registro Productores</h4>
+
+
     {% csrf_token%}
     <div class="form-group">
         
-        <label for="{{ form.numero_documento.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 80px;"   
-                class="col-sm-5 control-label"> {{form.numero_documento.label_tag}} {{ form.numero_documento }}</label>
+        <label for="{{ form.numero_documento.id_for_label }}"   
+                class="controls"> {{form.numero_documento.label_tag}} <br> {{ form.numero_documento }}</label>
         
     </div>
 
     <div class="form-group">
-        <label for="{{ form.nombre.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 80px;"
-                class="col-sm-5 control-label"> {{ form.nombre.label_tag }} {{ form.nombre }}</label>
+        <label for="{{ form.nombre.id_for_label }}" 
+                class="controls"> {{ form.nombre.label_tag }} <br> {{ form.nombre }}</label>
     </div>
 
     <div class="form-group">
-        <label for="{{ form.apellido.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 80px;"
-                class="col-sm-5 control-label"> {{ form.apellido.label_tag }} {{ form.apellido }}</label>
+        <label for="{{ form.apellido.id_for_label }}" 
+                class="controls"> {{ form.apellido.label_tag }} <br> {{ form.apellido }}</label>
     </div>
 
     <div class="form-group">
-        <label for="{{ form.direccion.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 60px;"
-                class="col-sm-5 control-label"> {{ form.direccion.label_tag }} {{ form.direccion }}</label>
+        <label for="{{ form.direccion.id_for_label }}" 
+                class="controls"> {{ form.direccion.label_tag }} <br> {{ form.direccion }}</label>
         
     </div>
 
     <div class="form-group">
-        <label for="{{ form.email.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 100px;"
-                class="col-sm-5 control-label"> {{ form.email.label_tag }} {{ form.email }}</label>
+        <label for="{{ form.email.id_for_label }}" 
+                class="controls"> {{ form.email.label_tag }} <br> {{ form.email }}</label>
         
     </div>
 
     <div class="form-group">
-        <label for="{{ form.telefono.id_for_label }}" style="color:white; font-family: 'Lucida Sans'; font-size: 20px; height: 30px; text-align: center; padding-left: 70px;"
-                class="col-sm-5 control-label"> {{ form.telefono.label_tag }} {{ form.telefono }}</label>
+        <label for="{{ form.telefono.id_for_label }}" 
+                class="controls"> {{ form.telefono.label_tag }} <br> {{ form.telefono }}</label>
             
     </div>
 
       
-    <button class="btn btn-primary" type="submit" style="width: 110px; margin-left: 17%; font-size: 20px;" onclick="ConfirmarRegistro()">Guardar</button>
+    <button class="btn btn-primary" type="submit" style="width: 120px; margin-left: 0%; font-size: 20px; color: black;" onclick="ConfirmarRegistro()">Guardar</button>
 
-    <button class="btn btn-primary" type="submit" style="width: 110px; margin-left: 1%; font-size: 20px;" onclick="CambioRegistro()">Editar</button>
-
-    <a class="button" href="listarproductor" style="color: khaki; padding: 0px; margin-left: 1%; font-size: 20px;">Ver registros</a>
+    <a class="button" href="{% url 'listarproductor' %}" style="color: khaki; padding: 0px; margin-left: 15%; font-size: 20px;">Ver registros</a>
  
 </form>
 

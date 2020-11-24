@@ -4,7 +4,7 @@ from colorfield.widgets import ColorWidget
 
 class FormularioProductor(forms.ModelForm):
     
-    #Se cre la clase para invocar el modelo 
+    #Se crea la clase para invocar el modelo 
     class Meta:
         model = Productor 
         #fields = '__all__'
@@ -30,7 +30,7 @@ class FormularioProductor(forms.ModelForm):
         }
 
         widgets = {
-            'numero_documento': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
+            'numero_documento': forms.TextInput(attrs={'class': 'left', 'autofocus': 'autofocus'}),
             'nombre': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
             'apellido': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
             'direccion': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
@@ -40,12 +40,6 @@ class FormularioProductor(forms.ModelForm):
             
         }
 
-        ''''numero_documento': ColorWidget,
-            'nombre': ColorWidget,
-            'apellido': ColorWidget,
-            'direccion': ColorWidget,
-            'email': ColorWidget,
-            'telefono': ColorWidget,'''
 
         
 
