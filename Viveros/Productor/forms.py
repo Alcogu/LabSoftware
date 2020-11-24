@@ -30,12 +30,41 @@ class FormularioProductor(forms.ModelForm):
         }
 
         widgets = {
-            'numero_documento': forms.TextInput(attrs={'class': 'left', 'autofocus': 'autofocus'}),
-            'nombre': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
-            'apellido': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
-            'direccion': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
-            'email': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
-            'telefono': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
+            'numero_documento': forms.TextInput(
+                attrs = {
+                    'class': 'form-control', 
+                    'placeholder':'Ingrese la cedula del productor',
+                    'autofocus': 'autofocus'}),
+
+            'nombre': forms.TextInput(
+                attrs = 
+                {'class': 'form-control',
+                'placeholder':'Ingrese el nombre del productor', 
+                'autofocus': 'autofocus'}),
+
+            'apellido': forms.TextInput(
+                attrs = 
+                {'class': 'form-control',
+                'placeholder':'Ingrese el apellido del productor', 
+                'autofocus': 'autofocus'}),
+
+            'direccion': forms.TextInput(
+                attrs = 
+                {'class': 'form-control',
+                'placeholder':'Ingrese la dirección del productor', 
+                'autofocus': 'autofocus'}),
+
+            'email': forms.TextInput(
+                attrs = 
+                {'class': 'form-control',
+                'placeholder':'Ingrese el email del productor', 
+                'autofocus': 'autofocus'}),
+
+            'telefono': forms.TextInput(
+                attrs = 
+                {'class': 'form-control',
+                'placeholder':'Ingrese el telefono del productor', 
+                'autofocus': 'autofocus'}),
 
             
         }
