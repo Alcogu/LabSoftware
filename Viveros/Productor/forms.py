@@ -30,23 +30,6 @@ class FormularioProductor(forms.ModelForm):
         }
 
         widgets = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'numero_documento': forms.TextInput(attrs={'class':'form-control'}),
-            'nombre': forms.TextInput(attrs={'class':'form-control'}),
-            'apellido': forms.TextInput(attrs={'class':'form-control'}),
-            'direccion': forms.TextInput(attrs={'class':'form-control'}),
-            'email': forms.TextInput(attrs={'class':'form-control'}),
-            'telefono': forms.TextInput(attrs={'class':'form-control'}),
-        }
-=======
-            'numero_documento': forms.TextInput(attrs={'class': 'left', 'autofocus': 'autofocus'}),
-            'nombre': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
-            'apellido': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
-            'direccion': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
-            'email': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
-            'telefono': forms.TextInput(attrs={'class': 'center', 'autofocus': 'autofocus'}),
-=======
             'numero_documento': forms.TextInput(
                 attrs = {
                     'class': 'form-control', 
@@ -82,13 +65,6 @@ class FormularioProductor(forms.ModelForm):
                 {'class': 'form-control',
                 'placeholder':'Ingrese el telefono del productor', 
                 'autofocus': 'autofocus'}),
->>>>>>> origin/Registro
 
             
         }
-
-
-        
-
-    
->>>>>>> Registro
