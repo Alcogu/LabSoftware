@@ -48,5 +48,3 @@ def eliminar_productor(request, id):
         productor.delete()
         return redirect('listarproductor')
     return render(request, 'productor/confirmarEliminar.html', {'productor':productor})
-    
-

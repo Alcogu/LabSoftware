@@ -93,12 +93,12 @@ WSGI_APPLICATION = 'Viveros.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Viveros',
-        'USER': 'postgres',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'viveros',
+        'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
-        'DATABASE_POST': '5432',
+        'DATABASE_POST': '8081',
     }
 }
 
