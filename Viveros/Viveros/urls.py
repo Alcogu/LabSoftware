@@ -17,10 +17,11 @@ from django.contrib import admin
 #<<<<<<< HEAD
 from django.urls import path
 #<<<<<<< HEAD
-
+"""
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+"""
 #=======
 from Vivero import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -40,8 +41,4 @@ urlpatterns = [
 
 ]
 
-#<<<<<<< HEAD
 urlpatterns += staticfiles_urlpatterns()
-#>>>>>>> dimas
-#=======
-#>>>>>>> dimas
