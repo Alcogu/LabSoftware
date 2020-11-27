@@ -14,33 +14,29 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-#<<<<<<< HEAD
 from django.urls import path
-#<<<<<<< HEAD
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
-#=======
 from Vivero import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-#=======
 from django.urls import path, include
-from Vivero import views 
+#Importamos librerias para el Login
+from django.contrib.auth import login, logout
+from Login.views import Login, logoutUsuario  
+from django.contrib.auth.decorators import login_required
+from .views import inicio
 
-#>>>>>>> dimas
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('Vivero.urls')),
+    path('', login_required(inicio), name = 'Inicio'),
+    path('vivero/', include('Vivero.urls')),
     path('productor/', include('Productor.urls')),
     path('labor/', include('Labor.urls')),
-    path('iniciosesion/', include('Login.urls'))
+    path('accounts/login/', Login.as_view(), name = 'login'),
+    path('logout', login_required(logoutUsuario), name = 'logout' ),
+    
 
 ]
 
-#<<<<<<< HEAD
 urlpatterns += staticfiles_urlpatterns()
-#>>>>>>> dimas
-#=======
-#>>>>>>> dimas
