@@ -32,7 +32,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('usuarios/', include(('Usuario.urls', 'usuario'))),
     path('', login_required(inicio), name = 'Inicio'),
-    path('vivero/', include('Vivero.urls')),
+    path('vivero/', include(('Vivero.urls', 'vivero'))),
     path('productor/', include('Productor.urls')),
     path('labor/', include('Labor.urls')),
     path('accounts/login/', Login.as_view(), name = 'login'),
