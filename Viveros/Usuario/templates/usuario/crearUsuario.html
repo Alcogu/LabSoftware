@@ -1,0 +1,33 @@
+{% extends "vivero/base.html"%}
+{% load static %}
+{% block content %}
+
+<head>
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/productores.css' %}">
+
+</head>
+
+<br>
+
+
+<form class="form-horizontal" method="POST">
+    <h4>Registro Usuarios</h4>
+
+    {% csrf_token%}
+    {{ form.as_p }}
+
+    <div class="">
+        <button class="btn btn-primary" type="submit" style="width: 120px; margin-left: 0%; font-size: 18px; color: black;">Registrar</button>
+        <a href="{% url 'usuario:listar_usuario' %}" class="btn btn-danger" style="width: 120px; margin-left: 10%; font-size: 18px; color: black;">Cancelar</a>
+        
+    </div>
+    
+</form>
+
+<br>
+
+
+
+
+{% endblock %}
