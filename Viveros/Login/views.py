@@ -36,6 +36,10 @@ class Login(FormView):
 
 def logoutUsuario(request):
     logout(request)
-    return HttpResponseRedirect('accounts/login/')
+    return HttpResponseRedirect('/accounts/login/')
+
+
+#def menu_sesion(request):
+#    return render(request, "login/barraSesion.html")
 
     
