@@ -4,11 +4,59 @@
 
 <head>
     <title>Viveros</title>
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/viveros.css' %}">
+    
+    <script type="text/javascript">
+    function ConfirmarRegistro(){
+        alert("Registro exitoso")
+    }
+    </script>
 
 </head>
 
-<p style="color: white; text-align: center;">Aca viene el formulario de los viveros.</p>
+<br>
 
+<form class="form-horizontal" method="POST">
+    <h4>Registro Viveros</h4>
+
+
+    {% csrf_token%}
+    <div class="row form-group">
+        
+        <label for="{{ form.id.id_for_label }}"   
+                class="controls"> {{form.id.label_tag}} <br> {{ form.id }}</label>
+        
+    </div>
+
+    <div class="row form-group">
+        <label for="{{ form.codigo.id_for_label }}" 
+                class="controls"> {{ form.codigo.label_tag }} <br> {{ form.codigo }}</label>
+    </div>
+
+    <div class="row form-group">
+        <label for="{{ form.nombre.id_for_label }}" 
+                class="controls"> {{ form.nombre.label_tag }} <br> {{ form.nombre }}</label>
+    </div>
+
+    <div class="row form-group">
+        <label for="{{ form.id_productor.id_for_label }}" 
+                class="controls"> {{ form.id_productor.label_tag }} <br> {{ form.id_productor }}</label>
+        
+    </div>
+
+    <div class="row form-group">
+        <label for="{{ form.id_departamento.id_for_label }}" 
+                class="controls"> {{ form.id_departamento.label_tag }} <br> {{ form.id_departamento }}</label>
+        
+    </div>
+
+      
+    <button class="btn btn-primary" type="submit" style="width: 120px; margin-left: 0%; font-size: 20px; color: black;" onclick="ConfirmarRegistro()">Guardar</button>
+
+    <a class="button" href="{% url 'listarvivero' %}" style="color: khaki; padding: 0px; margin-left: 30%; font-size: 20px;">Ver registros</a>
+ 
+</form>
+
+<br>
 
 {% endblock %}
