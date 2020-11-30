@@ -1,5 +1,4 @@
 from django import forms
-<<<<<<< HEAD
 from Vivero.models import Vivero
 from colorfield.widgets import ColorWidget 
 
