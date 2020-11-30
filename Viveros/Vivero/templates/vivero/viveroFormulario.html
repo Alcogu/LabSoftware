@@ -4,6 +4,7 @@
 
 <head>
     <title>Viveros</title>
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="{% static 'css/viveros.css' %}">
     
     <script type="text/javascript">
@@ -56,6 +57,48 @@
     <a class="button" href="{% url 'listarvivero' %}" style="color: khaki; padding: 0px; margin-left: 30%; font-size: 20px;">Ver registros</a>
  
 </form>
+=======
+    <link rel="stylesheet" type="text/css" href="{% static 'css/productores.css' %}">
+
+
+</head>
+
+<form class="form-horizontal" method="POST">
+    <h4>Registro Viveros</h4>
+
+    {% csrf_token%}
+
+
+    {{ form.as_p }}
+    <!--{{ form.codigo.label }}
+    {{ form.codigo }}
+
+    {{ form.nombre_vivero.label }}
+    {{ form.nombre_vivero }}
+
+    {{ form.productor.label }}
+    {{ form.productor }}
+
+    {{ form.departamento.label }}
+    {{ form.departamento }}
+
+
+    {{ form.municipio.label }}
+    {% if form.departamento.id == form.municipio.departamento_id %}
+     {{ form.municipio }}
+    {% endif %}
+    -->
+    
+
+    <div class="">
+        <button class="btn btn-primary" type="submit" style="width: 120px; margin-left: 0%; font-size: 18px; color: black;">Registrar</button>
+        <a href="{% url 'vivero:listar_vivero' %}" class="button" style="width: 120px; margin-left: 10%; font-size: 18px; color: khaki;">Ver registros viveros</a>
+        
+    </div>
+    
+</form>
+<br>
+>>>>>>> eb05b70f5684fc25d7caee1ce362b13273acfb45
 
 <br>
 
