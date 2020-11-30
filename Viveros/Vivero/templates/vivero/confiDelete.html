@@ -4,7 +4,7 @@
 
 <head>
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/tablaviveros.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tablaViveros.css' %}">
 </head>
 
 <body>
@@ -12,7 +12,7 @@
     <form method="POST">
         {% csrf_token %}
 
-        <h3>¿Desea eliminar el Vivero {{ vivero.id }} {{ vivero.codigo }}?</h3>
+        <h3>¿Desea eliminar el Vivero {{ vivero.n_id }} {{ vivero.codigo }}?</h3>
         <button class="btn btn-primary" type="submit" style="width: 110px; margin-left: 44%; font-size: 20px; color: black; ">Si</button>
         <a class="btn btn-primary" style="width: 110px; margin-left: 0%; font-size: 20px; color: black;" href="{% url 'listarvivero' %}">No</a>
 

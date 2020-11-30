@@ -11,7 +11,7 @@ class FormularioVivero(forms.ModelForm):
 
     #Se crear tuplas para guardar la información o los campos del modelo
         fields =[
-            'id',
+            'n_id',
             'codigo',
             'nombre',
             'id_productor',
@@ -20,7 +20,7 @@ class FormularioVivero(forms.ModelForm):
     #Se definen las etiquetas y escribimos un diccionario
 
         labels = {
-            'id': 'ID',
+            'n_id': 'ID',
             'codigo': 'Codigo',
             'nombre': 'Nombre',
             'id_productor': 'ID productor',
@@ -28,7 +28,7 @@ class FormularioVivero(forms.ModelForm):
         }
 
         widgets = {
-            'id': forms.TextInput(
+            'n_id': forms.TextInput(
                 attrs = {
                     'class': 'form-control', 
                     'placeholder':'Ingrese el id del vivero',

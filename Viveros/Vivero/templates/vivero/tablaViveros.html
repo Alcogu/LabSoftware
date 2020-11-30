@@ -4,7 +4,7 @@
 
 <head>
     <title>Registros Viveros</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/tablaproductores.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tablaviveros.css' %}">
 
 
 </head>
@@ -15,7 +15,7 @@
     
     <thead>
         <tr>
-            <th>ID</th>
+            <th>n_id</th>
             <th>Codigo</th>
             <th>Nombre Vivero</th>
             <th>Propietario</th>
@@ -27,7 +27,7 @@
     <tbody>
         {% for vivero in object_list %}
         <tr>
-            <td>{{ vivero.ID }}</td>
+            <td>{{ vivero.n_id }}</td>
             <td>{{ vivero.codigo }}</td>
             <td>{{ vivero.nombre_vivero }}</td>
             <td>{{ vivero.productor }}</td>

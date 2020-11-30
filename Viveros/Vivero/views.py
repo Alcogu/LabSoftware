@@ -93,7 +93,7 @@ class ListarVivero(ListView):
 
 class EditarVivero(UpdateView):
     model = Vivero
-    template_name = "vivero/viveroFormulario.html"
+    template_name = "vivero/viveros.html"
     form_class = FormularioVivero
     success_url = reverse_lazy('vivero:listar_vivero')
 
@@ -101,9 +101,3 @@ class EditarVivero(UpdateView):
 class EliminarVivero(DeleteView):
     model = Vivero
     success_url = reverse_lazy('vivero:listar_vivero')
-
-
-
-
-
-
