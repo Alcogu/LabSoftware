@@ -31,7 +31,3 @@ class ViveroModelTest(TestCase):
         vivero = Vivero.objects.get(id=1)
         codigo_v = vivero.codigo
         self.assertEquals(codigo_v, 123)
-    
-
-
-    
