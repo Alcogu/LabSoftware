@@ -17,7 +17,6 @@ def productor(request):
         form = FormularioProductor
     return render(request, 'productor/productores.html', {'form': form})
 
-
 def productor_list(request):
     productor = Productor.objects.all()
     contexto = {'productores': productor}
