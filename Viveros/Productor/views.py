@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.template import loader, Context
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render
 from Productor.forms import FormularioProductor
 from Productor.models import Productor
 from django.views.generic.edit import CreateView
@@ -48,5 +48,3 @@ def eliminar_productor(request, id):
         productor.delete()
         return redirect('listarproductor')
     return render(request, 'productor/confirmarEliminar.html', {'productor':productor})
-    
-

@@ -26,8 +26,6 @@ from .views import inicio
 from Login import views
 
 
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('usuarios/', include(('Usuario.urls', 'usuario'))),

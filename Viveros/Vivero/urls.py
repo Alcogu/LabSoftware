@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.contrib.auth.decorators import login_required
 from .views import ViveroCreateView, ListarVivero, EditarVivero, EliminarVivero
 
+
 urlpatterns = [
     #path('', login_required(views.inicio), name="Inicio"),
     path('', login_required(ViveroCreateView.as_view()), name="registro_vivero"),
