@@ -1,0 +1,52 @@
+{% extends "vivero/base.html"%}
+{% load static %}
+{% block content %}
+
+<head>
+  <title>Inicio</title>
+
+
+</head>
+
+  <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static '/img/intro.jpg' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Gestor de Viveros</span>
+          </h2>
+          <p class="mb-3">Con nuestro gestor de viveros siempre tendrás la facilidad para llevar
+            un control de tus viveros y sus labores y así evitar tediosos procesos manuales
+          </p>
+          <div class="intro-button mx-auto">
+            <a class="btn btn-primary btn-xl" href="#">Conoce mas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <div class="cta-inner text-center rounded">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-upper">Nuestro compromiso</span>
+            </h2>
+            <p class="mb-0">Por medio de nuestra aplicación nuestro usuarios siempre
+              tendrán la certeza de que tendrán una manera fácil, amigable y rápida
+              de llevar a cabo la gestión de sus viveros de una forma 100% automatizada,
+              para que así puedan ahorrar tiempo que pueden invertir en otras gestiones
+              o compartiendo con sus seres cercanos de esos momentos que tanto llenan
+              su corazón
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock %}
