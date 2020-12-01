@@ -4,11 +4,46 @@
 
 <head>
     <title>Viveros</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/productores.css' %}">
 
 
 </head>
 
-<p style="color: white; text-align: center;">Aca viene el formulario de los viveros.</p>
+<form class="form-horizontal" method="POST">
+    <h4>Registro Viveros</h4>
+
+    {% csrf_token%}
+
+
+    {{ form.as_p }}
+    <!--{{ form.codigo.label }}
+    {{ form.codigo }}
+
+    {{ form.nombre_vivero.label }}
+    {{ form.nombre_vivero }}
+
+    {{ form.productor.label }}
+    {{ form.productor }}
+
+    {{ form.departamento.label }}
+    {{ form.departamento }}
+
+
+    {{ form.municipio.label }}
+    {% if form.departamento.id == form.municipio.departamento_id %}
+     {{ form.municipio }}
+    {% endif %}
+    -->
+    
+
+    <div class="">
+        <button class="btn btn-primary" type="submit" style="width: 120px; margin-left: 0%; font-size: 18px; color: black;">Registrar</button>
+        <a href="{% url 'vivero:listar_vivero' %}" class="button" style="width: 120px; margin-left: 10%; font-size: 18px; color: khaki;">Ver registros viveros</a>
+        
+    </div>
+    
+</form>
+<br>
 
 
 {% endblock %}

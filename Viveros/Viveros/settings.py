@@ -47,14 +47,10 @@ INSTALLED_APPS = [
     'bootstrap4',
     'Login',
     'Productor',
-#<<<<<<< HEAD
-#=======
     'Vivero',
-#<<<<<<< HEAD
-#>>>>>>> dimas
-#=======
     'Labor',
-#>>>>>>> dimas
+    'Usuario', 
+
 ]
 
 MIDDLEWARE = [
@@ -94,11 +90,11 @@ WSGI_APPLICATION = 'Viveros.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Viveros',
+        'NAME': 'vivero',
         'USER': 'postgres',
         'PASSWORD': '',
         'HOST': 'localhost',
-        'DATABASE_POST': '5432',
+        'DATABASE_PORT': '5432',
     }
 }
 
@@ -121,6 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'Usuario.Usuario'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/

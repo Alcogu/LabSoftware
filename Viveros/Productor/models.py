@@ -9,12 +9,20 @@ class Productor(models.Model):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     numero_documento = models.IntegerField()
 =======
     numero_documento = models.IntegerField()
     
 >>>>>>> dimas
 =======
+=======
+    numero_documento = models.IntegerField()
+    
+=======
+    numero_documento = models.IntegerField()
+>>>>>>> Develop
+>>>>>>> Master
 =======
 #<<<<<<< HEAD
 >>>>>>> dimas
