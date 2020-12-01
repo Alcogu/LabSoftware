@@ -11,7 +11,6 @@ def productor(request):
     if request.method == 'POST':
         form = FormularioProductor(request.POST)
         if form.is_valid():
-            #messages.success(request, 'Productor guardado')
             form.save()
         return redirect('Productor')
     else:
