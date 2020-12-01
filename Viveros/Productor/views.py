@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.template import loader, Context
 from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render_to_response, get_object_or_404
 from Productor.forms import FormularioProductor
 from Productor.models import Productor
 from django.views.generic.edit import CreateView
@@ -11,11 +12,13 @@ def productor(request):
     if request.method == 'POST':
         form = FormularioProductor(request.POST)
         if form.is_valid():
+            #messages.success(request, 'Productor guardado')
             form.save()
         return redirect('Productor')
     else:
         form = FormularioProductor
     return render(request, 'productor/productores.html', {'form': form})
+
 
 def productor_list(request):
     productor = Productor.objects.all()
@@ -45,3 +48,5 @@ def eliminar_productor(request, id):
         productor.delete()
         return redirect('listarproductor')
     return render(request, 'productor/confirmarEliminar.html', {'productor':productor})
+    
+

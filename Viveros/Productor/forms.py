@@ -65,5 +65,11 @@ class FormularioProductor(forms.ModelForm):
                 {'class': 'form-control',
                 'placeholder':'Ingrese el telefono del productor', 
                 'autofocus': 'autofocus'}),
+
             
         }
+
+
+        
+
+    

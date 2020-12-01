@@ -1,60 +1,78 @@
 from django import forms
-from Vivero.models import Vivero
-from colorfield.widgets import ColorWidget 
+from betterforms.multiform import MultiModelForm
+from django.contrib.auth.forms import AuthenticationForm
+from Vivero.models import Departamento, Municipio, Vivero
+
+#Create form
+class FormularioDepartamento(forms.ModelForm):
+
+    class Meta:
+        model = Departamento
+        fields = ('nombre_departamento',)
+        widgets = {
+            'nombre_departamento': forms.Select(
+                attrs = {
+                    'class': 'form-control',
+                    'placeholder': 'Selecciona un departamento...'
+                }
+            )
+        }
+
+class FormularioMunicipio(forms.ModelForm):
+    
+    class Meta:
+        model = Municipio
+        fields = ('nombre_municipio',)
+        widgets = {
+            'nombre_municipio': forms.Select(
+                attrs = {
+                    'class': 'form-control',
+                    'placeholder': 'Selecciona un municipio...'
+                }
+            )
+        }
 
 class FormularioVivero(forms.ModelForm):
-    
-    #Se crea la clase para invocar el modelo 
+
     class Meta:
-        model = Vivero 
-        #fields = '__all__'
-
-    #Se crear tuplas para guardar la información o los campos del modelo
-        fields =[
-            'n_id',
-            'codigo',
-            'nombre',
-            'id_productor',
-            'id_departamento',
-        ]
-    #Se definen las etiquetas y escribimos un diccionario
-
-        labels = {
-            'n_id': 'ID',
-            'codigo': 'Codigo',
-            'nombre': 'Nombre',
-            'id_productor': 'ID productor',
-            'id_departamento': 'ID departamento',
-        }
-
+        model = Vivero
+        fields = ('codigo', 'nombre_vivero','productor', 'departamento','municipio')
         widgets = {
-            'n_id': forms.TextInput(
+            'departamento': forms.Select(
                 attrs = {
-                    'class': 'form-control', 
-                    'placeholder':'Ingrese el id del vivero',
-                    'autofocus': 'autofocus'}),
-
+                    'class': 'form-control',
+                    'placeholder': 'Selecciona un departamento...'
+                }
+            ),
+            'municipio': forms.Select(
+                attrs = {
+                    'class': 'form-control',
+                    'placeholder': 'Selecciona un municipio...'
+                }
+            ),
+            'productor': forms.Select(
+                attrs = {
+                    'class': 'form-control',
+                    'placeholder': 'Selecciona un productor...'
+                }
+            ),
             'codigo': forms.TextInput(
-                attrs = 
-                {'class': 'form-control',
-                'placeholder':'Ingrese el codigo del vivero', 
-                'autofocus': 'autofocus'}),
-
-            'nombre': forms.TextInput(
-                attrs = 
-                {'class': 'form-control',
-                'placeholder':'Ingrese el nombre del vivero', 
-                'autofocus': 'autofocus'}),
-
-            'id_productor': forms.TextInput(
-                attrs = 
-                {'class': 'form-control',
-                'placeholder':'Ingrese el ID del productor', 
-                'autofocus': 'autofocus'}),
-
-            'id_departamento': forms.TextInput(
-                attrs = 
-                {'class': 'form-control',
-                'placeholder':'Ingrese el ID del departamento', 
-                'autofocus': 'autofocus'}),
+                attrs = {
+                    'class': 'form-control',
+                    'placeholder': 'Ingrese un codigo'
+                }
+            ),
+            'nombre_vivero': forms.TextInput(
+                attrs = {
+                    'class': 'form-control',
+                    'placeholder': 'Ingrese un nombre'
+                }
+            )
         }
+
+class DepartamentoMunicipioVivero(MultiModelForm):
+    form_classes = {
+        'departamento': FormularioDepartamento,
+        'municipio': FormularioMunicipio,
+        'vivero': FormularioVivero,
+    }
