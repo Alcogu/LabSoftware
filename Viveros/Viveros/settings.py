@@ -86,6 +86,20 @@ WSGI_APPLICATION = 'Viveros.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'vivero',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'DATABASE_PORT': '3306',
+    }
+}
+
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
