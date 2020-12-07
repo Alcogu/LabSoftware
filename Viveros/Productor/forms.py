@@ -68,8 +68,3 @@ class FormularioProductor(forms.ModelForm):
 
             
         }
-
-
-        
-
-    
