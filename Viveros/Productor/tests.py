@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Productor
+from Productor.models import Productor
 
 # Create your tests here.
 class ProductorModelTest(TestCase):
@@ -8,7 +8,6 @@ class ProductorModelTest(TestCase):
     def setUpTestData(cls):
         Productor.objects.create(numero_documento='45343242', nombre='Juan', apellido='Perez', direccion='Cra 7 # 677', email='juan@gmail.com', telefono='123456789')
     
-
     def test_nombre(self):
         productor = Productor.objects.get(id = 1)
         nombre_p = productor.nombre
