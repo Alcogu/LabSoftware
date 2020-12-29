@@ -25,9 +25,6 @@ from django.contrib.auth.decorators import login_required
 from .views import inicio
 from Login import views
 
-
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('usuarios/', include(('Usuario.urls', 'usuario'))),
@@ -38,7 +35,6 @@ urlpatterns = [
     path('accounts/login/', Login.as_view(), name = 'login'),
     path('logout/', login_required(logoutUsuario), name = 'logout' ),
     #path('iniciosesion/', include('Login.urls')),
-    
 
 ]
 
