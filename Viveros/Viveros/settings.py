@@ -15,26 +15,16 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-#<<<<<<< HEAD
-#=======
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-#>>>>>>> dimas
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'sgozlif7mf@$ax&bsj7ri*@t0)4=*i1i9gq^0mmu_6i54yfy(l'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -83,7 +73,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Viveros.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -92,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'vivero',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': 'contraseña',
         'HOST': 'localhost',
         'DATABASE_PORT': '5432',
     }
