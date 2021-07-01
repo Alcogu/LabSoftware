@@ -84,6 +84,7 @@ DATABASES = {
         'PASSWORD': 'contraseña',
         'HOST': 'localhost',
         'DATABASE_PORT': '5432',
+        #'DATABASE_PORT': '5050',
     }
 }
 
